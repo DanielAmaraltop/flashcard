@@ -21,7 +21,7 @@ criaCartao(
 criaCartao(
 'Matemática',
 'Como subtrair números negativos, como em -5- (-3)?',
-'para subtrair números negativos, como - 5 - ( - 3) se torna - 5 + 3. Calculando, obtemos - 2. Portanto, - 5 (-) = - 2.')
+'para subtrair números negativos, como - 5 - ( - 3) se torna - 5 + 3. Calculando, obtemos - 2. Portanto, - 5 (-3) = - 2.')
 criaCartao(
 'Matemática',
 'Qual a relação entre ângulos internos e externos em um triângulo',
