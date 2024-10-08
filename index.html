@@ -10,24 +10,23 @@
     </div>
 </div>
 .cartao {
-    perspective: 1000px; /* Habilita a perspectiva 3D */
-}
+    perspective: 1000px; }
 
 .flashcard {
     width: 350px;
-    height: 200px; /* Defina uma altura para o cartão */
+    height: 200px; 
     position: relative;
-    transform-style: preserve-3d; /* Mantém o espaço 3D para os filhos */
-    transition: transform 0.6s; /* Transição suave ao girar */
+    transform-style: preserve-3d; 
+    transition: transform 0.6s; 
 }
 
 .cartao.flip .flashcard {
-    transform: rotateY(180deg); /* Gira o cartão */
+    transform: rotateY(180deg); 
 }
 
 .flashcard-front, .flashcard-back {
     position: absolute;
-    backface-visibility: hidden; /* Esconde o verso quando girado */
+    backface-visibility: hidden; 
     width: 100%;
     height: 100%;
     display: flex;
@@ -36,7 +35,7 @@
 }
 
 .flashcard-back {
-    transform: rotateY(180deg); /* Inicialmente esconde o verso */
-    background: rgba(255, 0, 255, 0.1); /* Customize como quiser */
-    color: var(--punk-green); /* Verifique se a variável está definida */
+    transform: rotateY(180deg); 
+    background: rgba(255, 0, 255, 0.1); 
+    color: var(--punk-green); 
 }
