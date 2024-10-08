@@ -38,11 +38,11 @@ header {
     transform-style: preserve-3d;
     transition: transform 0.6s ease-in-out;
     cursor: pointer;
-    perspective: 1000px; /* Adiciona profundidade à rotação */
+    perspective: 1000px; /* Adiciona profundidade para o efeito 3D */
 }
 
 .flashcard.flip {
-    transform: rotateY(180deg);
+    transform: rotateY(180deg); /* Faz o flip total */
 }
 
 .cartao-pergunta,
@@ -58,8 +58,7 @@ header {
     padding: 20px;
     border-radius: 10px;
     font-size: 1.5em;
-    backface-visibility: hidden;
-    transition: transform 0.6s ease-in-out; /* Corrigido: movido de visibility para transform */
+    backface-visibility: hidden; /* Garante que o verso não apareça */
 }
 
 .cartao-pergunta {
@@ -76,16 +75,13 @@ header {
 .cartao-resposta {
     background-color: var(--punk-pink);
     color: var(--white);
-    transform: rotateY(180deg);
-    backface-visibility: hidden;
-}
-
-/* Corrigido: Em vez de usar visibility, o flip será controlado pela rotação */
-.flashcard.flip .cartao-pergunta {
-    transform: rotateY(180deg);
+    transform: rotateY(180deg); /* Deixa a resposta invertida inicialmente */
 }
 
 .flashcard.flip .cartao-resposta {
-    transform: rotateY(360deg);
+    transform: rotateY(0deg); /* Quando virar, a resposta aparece */
 }
 
+.flashcard.flip .cartao-pergunta {
+    transform: rotateY(180deg); /* Quando virar, a pergunta some */
+}
