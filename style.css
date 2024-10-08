@@ -1,22 +1,15 @@
 :root {
-    --punk-cyan: #00b3ff;
-    --punk-green: #00ff99; 
-    --glass-cyan: rgba(100, 50, 150, 0.3); 
-    --punk-pink: #ff2f89;    
- 
-}
-button {
-    transition: background-color 0.3s, transform 0.2s;
+    --punk-cyan: #00ff0d;
+    --punk-green: #00ffbf;
+    --glass-cyan: rgba(167, 83, 232, 0.3);
+    --punk-pink: #2f00ff;
+    --bg-black: #021016;
 }
 
-button:hover {
-    background-color: var(--punk-pink);
-    transform: scale(1.1);
-}
 body {
     background-color: var(--bg-black);
     color: var(--punk-cyan);
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Courier New', monospace;
     text-align: center;
     min-height: 100vh;
     margin: 0;
@@ -35,10 +28,7 @@ header {
 h1 {
     color: var(--punk-pink);
     text-shadow: 0 0 10px var(--punk-pink), 0 0 20px var(--punk-pink);
-    font-weight: bold;
-    letter-spacing: 1px;
 }
-
 
 #container {
     width: 100%;
