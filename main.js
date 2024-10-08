@@ -16,6 +16,20 @@ function criaCartao(categoria, pergunta, resposta) {
     `;
     
     container.appendChild(cartao);
+<div id="container">
+    <div class="flashcard" onclick="this.classList.toggle('flip')">
+        <div class="flashcard-inner">
+            <div class="cartao-pergunta">
+                <h3>Pergunta</h3>
+                <p>Qual é a capital da França?</p>
+            </div>
+            <div class="cartao-resposta">
+                <p>Paris</p>
+            </div>
+        </div>
+    </div>
+</div>
+
 }
 
 criaCartao('Física', 'Como a simplificação de um objeto para um ponto material pode facilitar a análise de um problema de cinemática', 'Simplificar um objeto para um ponto material reduz a complexidade do problema permitindo focar apenas nas variáveis principais');
