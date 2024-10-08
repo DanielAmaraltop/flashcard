@@ -41,8 +41,8 @@ header {
     width: 100%;
     height: 100%;
     position: relative;
-    transform-style: preserve-3d;
-    transition: transform 1s; /* Ajuste a duração para 1 segundo */
+    transform-style: preserve-3d; /* Permite o efeito 3D */
+    transition: transform 1s; /* Duração da transição */
 }
 
 .flashcard.flip .flashcard-inner {
@@ -78,18 +78,6 @@ header {
 .cartao-resposta {
     background-color: var(--punk-pink);
     color: var(--white);
-    transform: rotateY(180deg); /* Deixa a resposta invertida inicialmente */
+    transform: rotateY(180deg); /* A resposta está invertida inicialmente */
 }
 
-/* Melhor responsividade para telas menores */
-@media (max-width: 768px) {
-    .flashcard {
-        width: 100%;
-        height: 250px;
-    }
-
-    .cartao-pergunta,
-    .cartao-resposta {
-        font-size: 1.2em;
-    }
-}
