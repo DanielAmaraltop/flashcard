@@ -85,4 +85,4 @@ criaCartao(
 criaCartao(
 'História',
 'Quais foram alguns dos principais motivos que levaram ao início da 2ª guerra mundial',
-'Tratado de Versalhes, ascensão do nazismo, política expansionista de Hitler e a falta das potências em conter a agressão alemã')
+'Tratado de Versalhes, ascensão do nazismo, política expansionista de Hitler e a falta das potências em conter a agressão alemã')}
