@@ -17,10 +17,6 @@ body {
     grid-template-rows: auto 1fr auto;
 }
 
-color {
-    color: white;
-}
-
 header {
     min-height: 50px;
 }
@@ -33,21 +29,26 @@ h1 {
 #container {
     width: 100%;
     display: flex;
-    gap: 0rem;
+    gap: 1rem;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
+}
+
+.cartao {
+    perspective: 1000px; /* Enables 3D perspective */
 }
 
 .flashcard {
+    width: 350px;
     background: rgba(255, 0, 255, 0.1);
     border: 2px solid var(--punk-cyan);
     border-radius: 10px;
     padding: 20px;
-    margin: 20px auto;
-    width: 350px;
+    margin: 20px;
     box-shadow: 0 0 15px var(--glass-cyan);
     transition: transform 0.3s;
-   
+    position: relative;
+    transform-style: preserve-3d; /* Maintain 3D space for child elements */
 }
 
 .flashcard:hover {
@@ -68,5 +69,18 @@ h1 {
 footer {
     min-height: 50px;
     background-color: var(--glass-cyan);
-    padding: .25rem;
+    padding: .5rem;
+    color: var(--punk-pink);
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    #container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .flashcard {
+        width: 90%; /* Full width on small screens */
+    }
 }
