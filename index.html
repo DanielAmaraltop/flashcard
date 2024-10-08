@@ -1,4 +1,14 @@
 <!DOCTYPE html>
+<div class="cartao">
+    <div class="flashcard">
+        <div class="flashcard-front">
+            Front Content
+        </div>
+        <div class="flashcard-back">
+            Back Content
+        </div>
+    </div>
+</div>
 .cartao {
     perspective: 1000px; /* Habilita a perspectiva 3D */
 }
@@ -28,5 +38,5 @@
 .flashcard-back {
     transform: rotateY(180deg); /* Inicialmente esconde o verso */
     background: rgba(255, 0, 255, 0.1); /* Customize como quiser */
-    color: var(--punk-green);
+    color: var(--punk-green); /* Verifique se a variável está definida */
 }
