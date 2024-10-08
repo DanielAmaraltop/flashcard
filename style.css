@@ -1,14 +1,15 @@
 :root {
-    --punk-cyan: #00ff0d;
-    --punk-green: #00ffbf;
-    --glass-cyan: rgba(167, 83, 232, 0.3);
-    --punk-pink: #2f00ff;
+    --punk-cyan: #00ffcc;
+    --punk-green: #00ff37;
+    --glass-cyan: rgba(0, 255, 255, 0.3);
+    --punk-pink: #ff007f;
     --bg-black: #021016;
+    --white: #FFFFFF;
 }
 
 body {
-    background-color: var(--bg-black);
-    color: var(--punk-cyan);
+    background-color: #021016;
+    color: var(--white);
     font-family: 'Courier New', monospace;
     text-align: center;
     min-height: 100vh;
@@ -21,66 +22,69 @@ header {
     min-height: 50px;
 }
 
-h1 {
-    color: var(--punk-pink);
-    text-shadow: 0 0 10px var(--punk-pink), 0 0 20px var(--punk-pink);
-}
-
 #container {
     width: 100%;
     display: flex;
-    gap: 1rem;
+    gap: 20px;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-.cartao {
-    perspective: 1000px; /* Enables 3D perspective */
-}
-
 .flashcard {
-    width: 350px;
-    background: rgba(255, 0, 255, 0.1);
-    border: 2px solid var(--punk-cyan);
-    border-radius: 10px;
-    padding: 20px;
-    margin: 20px;
-    box-shadow: 0 0 15px var(--glass-cyan);
-    transition: transform 0.3s;
+    width: 500px;
+    height: 300px;
     position: relative;
-    transform-style: preserve-3d; /* Maintain 3D space for child elements */
+    transform-style: preserve-3d; 
+    transition: transform 0.6s;
 }
 
-.flashcard:hover {
-    transform: scale(1.05);
+.flashcard.flip {
+    transform: rotateY(180deg); /* Rotação de 180 graus ao clicar */
 }
 
-.question {
-    font-size: 1.2em;
-    margin-bottom: 10px;
+.cartao-pergunta,
+.cartao-resposta {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 10px; 
+    font-size: 1.5em; 
 }
 
-.answer {
-    font-size: 1em;
-    color: var(--punk-green);
-    opacity: 0.9;
+
+.cartao-resposta {
+    transform: rotateY(180deg); /* Inverte a resposta para que fique oculta inicialmente */
+    visibility: hidden;
 }
 
-footer {
-    min-height: 50px;
-    background-color: var(--glass-cyan);
-    padding: .5rem;
-    color: var(--punk-pink);
-    text-align: center;
+.flashcard.flip .cartao-resposta {
+    visibility: visible; /* Mostra a resposta ao clicar */
 }
 
-/* Responsive Design */
-@media (max-width: 600px) {
-    #container {
-        flex-direction: column;
-        align-items: center;
-    }
-    .flashcard {
-        width: 90%; /* Full width on small screens */
-    }
+.flashcard.flip .cartao-pergunta {
+    visibility: hidden; /* Oculta a pergunta ao clicar */
+}
+
+.cartao-pergunta {
+    display: flex;
+    flex-direction: column; /* Coloca o título e a pergunta em coluna */
+    align-items: center; /* Centraliza horizontalmente */
+    justify-content: center; /* Centraliza verticalmente */
+    height: 100%; /* Preenche a altura do cartão */
+}
+
+.cartao-pergunta h3 {
+    margin-bottom: 10px; /* Espaço entre o título e a pergunta */
+    text-align: center; /* Centraliza o texto do título */
+}
+
+.cartao-pergunta p {
+    text-align: center; /* Centraliza o texto da pergunta */
 }

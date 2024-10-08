@@ -1,41 +1,21 @@
 <!DOCTYPE html>
-<div class="cartao">
-    <div class="flashcard">
-        <div class="flashcard-front">
-            Front Content
-        </div>
-        <div class="flashcard-back">
-            Back Content
-        </div>
-    </div>
-</div>
-.cartao {
-    perspective: 1000px; }
-
-.flashcard {
-    width: 350px;
-    height: 200px; 
-    position: relative;
-    transform-style: preserve-3d; 
-    transition: transform 0.6s; 
-}
-
-.cartao.flip .flashcard {
-    transform: rotateY(180deg); 
-}
-
-.flashcard-front, .flashcard-back {
-    position: absolute;
-    backface-visibility: hidden; 
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.flashcard-back {
-    transform: rotateY(180deg); 
-    background: rgba(255, 0, 255, 0.1); 
-    color: var(--punk-green); 
-}
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shaberson cards</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Flashcards TOPZZZZ</h1>
+    </header>
+    <main>
+        <section id="container"></section>
+    </main>
+    <footer>
+        <p>Desenvolvido pelos alunos Cauã Oliveira Koinczeski(16) e Arthur Zuliani de Macedo(11)</p>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>
