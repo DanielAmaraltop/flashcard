@@ -5,6 +5,7 @@
     --punk-pink: #ff007f;
     --bg-black: #021016;
     --white: #ffffff;
+    --card-shadow: rgba(0, 0, 0, 0.3);
 }
 
 body {
@@ -32,13 +33,16 @@ header {
 }
 
 .flashcard {
-    width: 500px;
+    width: 100%;
+    max-width: 500px;
     height: 300px;
     position: relative;
     transform-style: preserve-3d;
     transition: transform 0.6s ease-in-out;
     cursor: pointer;
-    perspective: 1000px; /* Adiciona profundidade à rotação */
+    perspective: 1000px; 
+    box-shadow: 0 4px 8px var(--card-shadow);
+    border-radius: 10px;
 }
 
 .flashcard.flip {
@@ -66,6 +70,7 @@ header {
     background-color: var(--punk-cyan);
     color: var(--bg-black);
     flex-direction: column;
+    border: 2px solid var(--punk-green);
 }
 
 .cartao-pergunta h3 {
@@ -78,6 +83,7 @@ header {
     color: var(--white);
     transform: rotateY(180deg);
     visibility: hidden;
+    border: 2px solid var(--punk-green);
 }
 
 .flashcard.flip .cartao-resposta {
@@ -86,4 +92,18 @@ header {
 
 .flashcard.flip .cartao-pergunta {
     visibility: hidden;
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 768px) {
+    .flashcard {
+        height: 250px;
+        max-width: 100%;
+    }
+
+    .cartao-pergunta,
+    .cartao-resposta {
+        font-size: 1.2em;
+        padding: 15px;
+    }
 }
