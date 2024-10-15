@@ -13,13 +13,7 @@ function criaCartao(categoria, pergunta, resposta) {
             <div class="cartao-pergunta question">
                 <h3>${categoria}</h3>
                 <p>${pergunta}</p>
-            </div>
-            <div class="cartao-resposta answer">
-                <p>${resposta}</p>
-            </div>
-        </div>
-        `;
-        
+           
         container.appendChild(cartao);
 
 }
